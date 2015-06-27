@@ -1,0 +1,197 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  body {
+    margin: 0;
+    font: 16px/1 sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color: #212121;
+    color: #fff;
+
+    h1, h2, h3, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3 {
+      font-size: inherit;
+    }
+
+    li {
+      display: block;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    a, button {
+      color: inherit;
+      -webkit-transition: .3s;
+      transition: .3s;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+
+    :focus {
+      outline: 0;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    header {
+      height: 42px;
+      margin-top: 23px;
+      width: 100%;
+    }
+
+    #hugs {
+      width: 900px;
+      margin: 12px auto;
+
+      #canvas-hug {
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: 400px;
+        height: 400px;
+        border: 1px solid #555;
+        border-radius: 2px;
+        background-color: #DEDEDE;
+      }
+      #magic {
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: 96px;
+        height: 400px;
+        .star {
+          &.a {
+            top: 50%;
+            left: 25%;
+            animation-dealy: .5s;
+            animation: glitter 1.5s linear 0s infinite;
+            -webkit-animation: glitter 1.5s linear 0s infinite;
+          }
+          &.b {
+            top: 42%;
+            left: 5%;
+            animation-delay: .1s;
+            animation: glitter 1s linear 0s infinite;
+            -webkit-animation: glitter 1s linear 0s infinite;
+            transform: scale(.8);
+          }
+          &.c {
+            top: 30%;
+            left: 30%;
+            transform: scale(.5);
+            animation-delay: .3s;
+            animation: glitter .5s linear 0s infinite;
+            -webkit-animation: glitter .5s linear 0s infinite;
+          }
+          &.d {
+            top: 60%;
+            left: 10%;
+            animation-delay: 1s;
+            animation: glitter 1.2s linear 0s infinite;
+            -webkit-animation: glitter 1.2s linear 0s infinite;
+          }
+          &.e {
+            top: 72%;
+            left: 32%;
+            transform: scale(.7);
+            animation-delay: .3s;
+            animation: glitter 1s linear 0s infinite;
+            -webkit-animation: glitter 1s linear 0s infinite;
+          }
+          &.f {
+            top: 20%;
+            left: 22%;
+            animation-delay: .6s;
+            animation: glitter 1.4s linear 0s infinite;
+            -webkit-animation: glitter 1.4s linear 0s infinite;
+          }
+          display: none;
+          position: absolute;
+          height: 42px;
+          width: 42px;
+          background-color: #d5d5d5;
+          overflow: hidden;
+          .star-top, .star-bottom {
+            position: relative;
+            display: block;
+          }
+          .star-top:before,
+          .star-top:after,
+          .star-bottom:before,
+          .star-bottom:after {
+            content: "";
+            width: 42px;
+            height: 42px;
+            background-color: #212121;
+            border-radius: 50%;
+            position: absolute;
+          }
+          .star-top:before {
+            top: -21px;
+            left: -21px;
+          }
+          .star-top:after {
+            bottom: -21px;
+            left: 21px;
+          }
+          .star-bottom:before {
+            top: 21px;
+            left: -21px;
+          }
+          .star-bottom:after {
+            top: 21px;
+            left: 21px;
+          }
+        }
+      }
+      #you-hug {
+        position: relative;
+        display: inline-block;
+        float: left;
+        border: 1px solid #555;
+        border-radius: 2px;
+        width: 400px;
+        height: 400px;
+        background: #DEDEDE;
+
+        #you-box-shadowed {
+          overflow: hidden;
+          height: 1px;
+          width: 1px;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes glitter {
+  0% {-webkit-transform: scale(0.0); opacity:0;}
+  33% {-webkit-transform: scale(0.5); opacity:0.8;}
+  66% {-webkit-transform: scale(1.0); opacity:1;}
+  100% {-webkit-transform: scale(0.5); opacity:0;}
+}
+@-moz-keyframes glitter {
+  0% {-webkit-transform: scale(1.0); opacity:1;}
+  20% {-webkit-transform: scale(0.5); opacity:0;}
+  40% {-webkit-transform: scale(1.0); opacity:1;}
+  60% {-webkit-transform: scale(0.5); opacity:0;}
+  80% {-webkit-transform: scale(1.0); opacity:0;}
+  100% {-webkit-transform: scale(0.5); opacity:0;}
+}
