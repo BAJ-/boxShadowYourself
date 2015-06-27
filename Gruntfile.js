@@ -22,7 +22,7 @@ module.exports = function(grunt) {
       dev: {
         expand: true,
         cwd: 'src/styles/',
-        src: '**/*_compile.less',
+        src: '**/*.less',
         dest: 'src/css/',
         ext: '.css'
       },
@@ -65,6 +65,16 @@ module.exports = function(grunt) {
         files: ['src/**/*.html', 'src/styles/**/*.less', 'src/scripts/**/*.coffee'],
         tasks: ['coffee:dev', 'less:dev'],
         options: {
+          livereload: true
+        }
+      }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 8000,
+          hostname: '*',
+          keepalive: true,
           livereload: true
         }
       }
